@@ -1,0 +1,22 @@
+Question 1:
+It first checks for edge caess, to make sure if the input is None, it will output none. Afterwards, it uses for loop to check whether the second string exists in the first string.
+With one for loop, the efficiency is O(n) for average cases. Space complexity is O(1) as there is only consistent check within the strings, and do not need to save and extra space.
+
+Question 2:
+Created a helper script that checks whether the substring of the original string is a palindrome. With the while loop on the helper function, and the for loop to loop in combination of the strings, the time efficiency is O(n^2).
+
+For SearchForPalindrome, it has a for loop that consistently changing numbers for "start"and "end". That is O(2), and for question2 method, extra storage was stored for "length","i", and "result". It adds up the space complexity to be O(3). In sum the space complexity is O(5).  
+
+Question 3:
+It goes from the first dictionary, and keeps up climbing to the next list until it hits an entire circle. It then validates whether the distance would be better than the the alternatives. With 2 for loops, the time efficiency is also O(n^2).
+
+For Space complexity, it uses shortes_path as dictionary to set, add function, and checkec_vertex to Set(), which are all O(1). Total complexity is O(3). 
+
+Question 4:
+Created helperfunction for TreeLeveOutput to determine what the level the child is in, and also provide the node above it. The question 4 focuses on checking between which level is higher, and outout the ancestor of the higher node. TreeLeveLOutput is a recursive function with one for loop.It has a O(n^2) of efficiency. The actual question 4 does not have any itertion, so the efficiency is also O(n^2).
+
+For space complexity, it has a recursive function O(n) on TreeLevelOutputTuple. Since it has been called twice, it is now O(2n). 
+Question 5:
+Question 5 uses classes of Node and LinkedList to create linkedlist array. It first creates individual objects on Node(), then uses the Linkedlist to connect them all together. It then does tree climbing twice: the first time is to find out how many objects there are, and the second one to find out what is the correct object according to the list. It uses two while loops, which shows the efficiency to be O(n^2).
+
+For Space complexity, it uses classes to set, and next. These are all O(n) depending on the number of nodes that had been added. It then goes through while loops twice to check on the objects. Total space complexity if O(2n).
