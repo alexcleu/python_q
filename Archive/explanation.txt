@@ -1,7 +1,6 @@
 Question 1:
-First the function is used to check whether there are inputs from the beginning. Then it goes through a for loops to to break the first_str by sub string lengths of the second_str, and sort them to see any anagram combination. The for loop with a sorted() on the inside provides a O(n^2log(n)).
+Did a sort to sort both strings first, and then use a while loop to create a version of the second string based on first_str's substrings. Sorted() is used, and is the predominant Time complexity uses, thus the efficiency is O(nlog(n)). As for the space efficiency, I have created two lists that are sorted, and a sub_first_string list that gets appended. Since only one list gets appended, the space efficiency is O(n).
 
-As for space complexity, only i is used to create a new space for this function, thus it is O(1).
 Question 2:
 Created a helper script that checks whether the substring of the original string is a palindrome. With the while loop on the helper function, and the for loop to loop in combination of the strings, the time efficiency is O(n^2).
 
@@ -20,4 +19,4 @@ FOr space efficiency, no space is used at question4 method, but spaces where sav
 Question 5:
 Question 5 uses classes of Node and LinkedList to create linkedlist array. It first creates individual objects on Node(), then uses the Linkedlist to connect them all together. It then does tree climbing twice: the first time is to find out how many objects there are, and the second one to find out what is the correct object according to the list. It uses two while loops, which shows the efficiency to be O(n^2).
 
-For Space efficiency, it was saved to create 5 nodes class, and append them in a linked list of LInkedLIst(node). n node was created, and a list of 5 nodes were created for linked list. Within the function question 5, it stores ll in "current" and "next_current". Since the pointer is directly set and saved on the node, only one space was used. This efficiency is O(1).
+For Space efficiency, it was saved to create 5 nodes class, and append them in a linked list of LInkedLIst(node). n node was created, and a list of 5 nodes were created for linked list. Within the function question 5, it stores ll in "current" and "next_current". This shows the space efficiency to be O(n).

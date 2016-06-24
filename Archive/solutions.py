@@ -13,9 +13,17 @@ def question1(first_str,second_str):
   if first_str is None:
       return None
 
-  for i in xrange(0, len(first_str)):
-      if sorted(first_str[i:i+len(second_str)]) == sorted(second_str):
-          return True
+  first_string_sorted = sorted(first_str)
+  second_string_sorted = sorted(second_str)
+
+
+  i = 0
+  sub_first_string = []
+  for character in first_string_sorted:
+    if character in second_string_sorted:
+      sub_first_string.append(character)
+    if sub_first_string == second_string_sorted:
+        return True
 
   return False
 
@@ -24,7 +32,7 @@ assert question1("udacity","ad") == True
 # Output is True.
 assert question1("udacity","aa") == False
 # Output is False.
-assert question1("udacity","ya") == False
+assert question1(None,None) == None
 # Output is None.
 
 
@@ -100,7 +108,7 @@ def question3(graph):
         checked_vertex.add(adj[0])
   return shortest_path
 
-# Test data.
+# Test codes.
 ADJACENT_LIST_STRUCTURED = {'A':[('B',2),('C',8)],'B':[('A',2),('C',5)],'C':[('B',5), ('A', 8)]}
 
 # Assert test for Question 3.
@@ -113,7 +121,7 @@ def TreeLevelOutputTuple(tree, root_integer, child, level):
     """ Return tuple for each level of the tree is in, and the value on top.
 
     Args:
-      tree: represented as matrix
+      tree: tree: represented as matrix
       root_integer: Non negative integer
       level: The level the tree is currently in.
     """
@@ -168,6 +176,7 @@ assert question4(TREE_LIST, ROOT_INT, CHILD_1, CHILD_1) == 0
 assert question4([1,2,3,4], ROOT_INT, ROOT_INT, ROOT_INT) == None
 # Expected output None.
 
+  # ancestor will be the next higher up.
 def question5(ll, m):
   """ Find the element in a singly linked list that's m elements from the end.
   Args:
