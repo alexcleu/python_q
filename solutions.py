@@ -9,7 +9,6 @@ def question1(first_str,second_str):
   Returns:
     Boolean for whether second_str exists within the first_str.
   """
-
   if first_str is None:
       return None
 
@@ -19,7 +18,7 @@ def question1(first_str,second_str):
 
   return False
 
-print "This ia question 1 test cases:"
+print "This is question 1 test cases:"
 assert question1("udacity","ad") == True
 # Output is True.
 assert question1("udacity","aa") == False

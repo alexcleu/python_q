@@ -1,5 +1,6 @@
 Question 1:
-First the function is used to check whether there are inputs from the beginning. Then it goes through a for loops to to break the first_str by sub string lengths of the second_str, and sort them to see any anagram combination. The for loop with a sorted() on the inside provides a O(n^2log(n)).
+First the function is used to check whether there are inputs from the beginning. Then it goes through a for loops to to break the first_str by sub string lengths of the second_str, and sort them to see any anagram combination. 
+There is a cost efficiency for the for loop(O(n), the sort O(log(n)), the slice O(n*k). Summing up the efficient is n * (2log(n) + (n*len(second_str))). After dropping the constant factors, the final complexity will be O(nlog(n))
 
 As for space complexity, only i is used to create a new space for this function, thus it is O(1).
 Question 2:
